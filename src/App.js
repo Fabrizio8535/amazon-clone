@@ -5,7 +5,7 @@ import Home from './Home'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Checkout from './Checkout'
 
-/*https://www.youtube.com/watch?v=RDV3Z1KCBvo&t=1013s at 1:59:00 */
+/*https://www.youtube.com/watch?v=RDV3Z1KCBvo&t=1013s at 2:00:00 */
 
 function App() {
   return (
