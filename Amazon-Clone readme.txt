@@ -40,3 +40,4 @@
 
 - Added the Subtotal component on the Checkout component. Added all its imports and created a css for it too.
 - Used the command "npm i react-currency-format" so we can render money in an easy manner.
+-Used the CurrencyFormat tag on the subtotal component to render out money. Styled the whole subtotal section in Subtotal.css.
