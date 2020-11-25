@@ -46,3 +46,5 @@
 - Added StateProvider.js
 - Wrapped the App component in Index.js around the <StateProvider initialState ={initialState} reducer ={reducer}> tag.
 - Added a reducer.js file and then initialized the initial state and a reducer which helpes push the item to the basket.
+- In Product.js, Added an onclick on the 'Add to Basket' button then created the addToBasket function along with the "const [{basket}, dispatch] = useStateValue()"" along with its imports. This function uses the reducer to push the items to the basket
+- In Header.js, used the "const [{basket}, dispatch] = useStateValue()" for dynamically updating the number of items in the basket using {basket?.length} 
