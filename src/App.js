@@ -16,12 +16,12 @@ function App() {
         <Header />
 
         <Switch>
-        <Route path="/checkout">
-            <Checkout />
-        </Route>
+          <Route path="/checkout">
+              <Checkout />
+          </Route>
 
-        <Route path="/">
-            <Home />
+          <Route path="/">
+              <Home />
           </Route>
         </Switch>
       </div>

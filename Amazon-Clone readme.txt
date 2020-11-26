@@ -48,3 +48,11 @@
 - Added a reducer.js file and then initialized the initial state and a reducer which helpes push the item to the basket.
 - In Product.js, Added an onclick on the 'Add to Basket' button then created the addToBasket function along with the "const [{basket}, dispatch] = useStateValue()"" along with its imports. This function uses the reducer to push the items to the basket
 - In Header.js, used the "const [{basket}, dispatch] = useStateValue()" for dynamically updating the number of items in the basket using {basket?.length} 
+- In reducer.js, created a function called getBasketTotal that returns the 
+total price of the items in the basket.
+-In Subtotal.js, pulled the getBasketTotal function and used it in the value property and rendered it in renderText.
+
+(Displaying the items that were added to the basket in checkout screen)
+-Created CheckoutProduct.js
+-Passed as props {id, title, price, image, rating} to the CheckoutProduct.
+These attributes will be used to display the basket item on the checkout screen.
