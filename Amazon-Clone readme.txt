@@ -56,3 +56,7 @@ total price of the items in the basket.
 -Created CheckoutProduct.js
 -Passed as props {id, title, price, image, rating} to the CheckoutProduct.
 These attributes will be used to display the basket item on the checkout screen.
+-Styling the elements in the checkout screen in CheckoutProduct.css
+-Made the RemoveFromBasket button work on the CheckoutProduct by adding an
+onClick function which dispatches the 'REMOVE_FROM_BASKET' case to
+reducer.js.
