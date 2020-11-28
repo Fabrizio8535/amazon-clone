@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Checkout from './Checkout'
 import Login from './Login'
 
-/*https://www.youtube.com/watch?v=RDV3Z1KCBvo at 3:21:51 */
+/*https://www.youtube.com/watch?v=RDV3Z1KCBvo at 3:44:59 */
 
 function App() {
   return (

@@ -60,3 +60,18 @@ These attributes will be used to display the basket item on the checkout screen.
 -Made the RemoveFromBasket button work on the CheckoutProduct by adding an
 onClick function which dispatches the 'REMOVE_FROM_BASKET' case to
 reducer.js.
+
+-----------------User Register and Login---------------------
+-Implemented the Login Page UI logic using forms and routes
+- Styled the login page in Login.CSS
+- Went to firebase and enabled the Email & Password under 
+"Authentication" section
+- Used the "npm install firebase" command in terminal to install
+firebase into our project
+- In firebase.js, implemented the ability to access db and auth from firebase
+and exported them both so it can be accessed in other components
+- Then in Login.js, imported the "auth" from firebase.js. Also
+implemented the "auth" feature on register function.
+-In Login.js, Imported the useHistory from "react-router-dom"
+- Implemented the redirecting upon successful signup and login.
+User get redirected to the main page of the application.
