@@ -75,3 +75,14 @@ implemented the "auth" feature on register function.
 -In Login.js, Imported the useHistory from "react-router-dom"
 - Implemented the redirecting upon successful signup and login.
 User get redirected to the main page of the application.
+
+-Added a new state called user = null (initial value) in reducer.js
+- added the set_user functionality that will set the users coming
+from the login page. 
+-In App.js, created an useEffect (when App component mounts) to
+implement the sign in/sign out feature:
+If logged in, it dispatches the 'SET_USER' request with
+user as 'authUser' else dispatches 'SET_USER' with user as 'null'. 
+- In Header.js, fixed a few things so UI looks better such as 
+distinguishing between whether a user is logged in or not (by using 
+conditional rendering.)
