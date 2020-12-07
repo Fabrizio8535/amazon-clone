@@ -86,3 +86,12 @@ user as 'authUser' else dispatches 'SET_USER' with user as 'null'.
 - In Header.js, fixed a few things so UI looks better such as 
 distinguishing between whether a user is logged in or not (by using 
 conditional rendering.)
+
+---------------Deploying the app online-----------------
+- using "firebase login" on cmd admin mode
+- using "firebase init" on cmd admin mode
+--- choosing the "hosting" option, saying "build" on the question
+"what do you want to in project" then types "y" on "index.html" option
+finally, pressing y on "set automatic builds to github"
+- using "npm run build" on cmd admin mode
+-using "firebase deploy" on cmd admin mode
