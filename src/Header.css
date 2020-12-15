@@ -8,11 +8,6 @@
     z-index: 100;
 }
 
-/*Removes underlines under texts with links*/
-a:link {
-    text-decoration: none;
-  }
-
 .header__logo{
     width: 100px;
     object-fit: contain;
@@ -72,3 +67,8 @@ a:link {
     display: flex;
     justify-content: space-evenly;
 }
+
+/*Removes underlines under texts with links*/
+.header__nav > a {
+    text-decoration: none;
+  }

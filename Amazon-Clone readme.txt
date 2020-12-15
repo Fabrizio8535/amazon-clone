@@ -100,3 +100,10 @@ finally, pressing y on "set automatic builds to github"
 found on "https://github.com/joshwcomeau/react-flip-move"
 (completed)
 --Added hover effect on products in Home page
+
+
+---------------Payment/Checkout Page-------------------
+-Introducing useHistory on Subtotal.js for redirecting user to Payment/
+Checkout Page. Using history allows us to keep the button's styles.
+-Creating Payment.js using divs and interactive links.
+-Styling in Payment.css using flexboxes
