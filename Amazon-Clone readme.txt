@@ -95,3 +95,8 @@ conditional rendering.)
 finally, pressing y on "set automatic builds to github"
 - using "npm run build" on cmd admin mode
 -using "firebase deploy" on cmd admin mode
+
+--This is for the homework--- applying "react flip move animation"
+found on "https://github.com/joshwcomeau/react-flip-move"
+(completed)
+--Added hover effect on products in Home page

@@ -15,7 +15,7 @@ function Home() {
                 <div className="home__row">
                     <Product
                         id="12345671"
-                        title="Adonis- The Lean Startup: How Constant Innovation Creates
+                        title="The Lean Startup: How Constant Innovation Creates
                         Radically Successful Businesses Paperback"
                         price={109.99}
                         image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"

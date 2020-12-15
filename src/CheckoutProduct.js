@@ -1,6 +1,7 @@
 import React from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from './StateProvider'
+import FlipMove from 'react-flip-move'
 
 function CheckoutProduct({id, image, title, price, rating}) {
     const [{ basket }, dispatch] = useStateValue()
@@ -14,7 +15,8 @@ function CheckoutProduct({id, image, title, price, rating}) {
     }
 
     return (
-        <div className="checkoutProduct">
+        <FlipMove typeName={null}>
+        <div key={id} className="checkoutProduct">
             <img 
                 className="checkoutProduct__image"
                 src={image}
@@ -37,6 +39,7 @@ function CheckoutProduct({id, image, title, price, rating}) {
                 <button onClick={removeFromBasket}>Remove from basket</button>
             </div>
         </div>
+        </FlipMove>
     )
 }
 
