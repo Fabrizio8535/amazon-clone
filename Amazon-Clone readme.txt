@@ -106,4 +106,28 @@ found on "https://github.com/joshwcomeau/react-flip-move"
 -Introducing useHistory on Subtotal.js for redirecting user to Payment/
 Checkout Page. Using history allows us to keep the button's styles.
 -Creating Payment.js using divs and interactive links.
--Styling in Payment.css using flexboxes
+-Styling in Payment.css using flexboxes.
+
+--------------Stripe functionality---------------------
+-Install Stripe dependencies to handle payments
+a) npm install @stripe/stripe-js
+b) npm install @stripe/react-stripe-js
+-Upgrade Firebase plan to Blaze to be able to make outgoing requests(done)
+-Create account on Stripe.com and get the public API key
+- Perform two imports on App.js
+a)import { loadStripe } from '@stripe/stripe-js'
+b)import { Elements } from '@stripe/react-stripe-js'
+- then const promise = loadStripe('PublicApiKeyHere')
+- In App.js, wrap <Payment />like the following:
+<Elements stripe={promise}>
+	<Payment />
+</Elements>
+-In Payment.js, using useStripe() and useElements()... so add imports
+-Also import the CardElement along with those two as we will be using this
+later.
+-Now create a form and have <CardElement/> insisde it under the payment__details section
+-Add the .payment__details on flex-0.8 so the card form appears on screen.
+-handleChange and handleSubmit functions
+-Adding div inside the form with "payment__priceContainer" and
+CurrencyFormat on it.
+-Setting states for "error, disabled, processing and succeeded

@@ -8,8 +8,12 @@ import Login from './Login'
 import { auth } from "./firebase"
 import { useStateValue } from './StateProvider';
 import Payment from './Payment';
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 
-/*https://www.youtube.com/watch?v=RDV3Z1KCBvo at 5:35:13 */
+/*https://www.youtube.com/watch?v=RDV3Z1KCBvo at 6:00:21 */
+
+const promise = loadStripe('pk_test_51HykWYJgrIQ5vekhmn4JuFLysw2d6asUArT0RJe8hBj486WioaHAJcGfeynrMWXbDHwCvlkRCpinSdY1rctexgWO00wrC7jvWD')
 
 function App() {
   const [ {}, dispatch ] = useStateValue()
@@ -50,7 +54,9 @@ function App() {
 
           <Route path="/payment">
             <Header />
-            <Payment />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
           </Route>
 
           <Route path="/">
