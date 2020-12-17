@@ -156,5 +156,14 @@ FROM NOW ON ALWAYS USE NPM INSTALL INSIDE THIS DIRECTORY... very IMPORTANT
 and test whether the API call works... should get the response
 -- Now do the POST request for the api after the GET request.
 - Go to axios and paste the base url into it ("http://localhost:5001/challenge-1e59f/us-central1/api")
+- Add console.log on Payment.js to get clientSecret
+- If all good, the app should now work and each time the basket updates,
+the app should get new clientSecret.
+-Upon completing the payment processing, it should now send the payment
+details to Stripe.com and redirect the user to "/orders"
+-After the payment is successful, we have to empty basket so dispatch the
+type "EMPTY_BASKET" and also add the case on reducer.
 
---------FIX THAT ERROR WITH LOCALHOST://3000 THING ASAP
+----------------Pushing the Orders to the DB--------------------------
+-Go to Firebase -> FireStore -> Create FireStore -> Start in Test mode
+-In Payment.js, imported the {db} and implemented it after payment process..
