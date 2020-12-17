@@ -1,25 +1,61 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import CheckoutProduct from './CheckoutProduct'
 import './Payment.css'
 import { useStateValue } from './StateProvider'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import CurrencyFormat from 'react-currency-format'
 import { getBasketTotal } from './reducer'
+import axios from './axios'
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue()
-
+    const history = useHistory()
+    
     const stripe = useStripe()
     const elements = useElements()
 
-    const [succeeded, setSucceeded] = useState(false);
-    const [processing, setProcessing] = useState("");
-    const [error, setError] = useState(null);
-    const [disabled, setDisabled] = useState(true);
+    const [succeeded, setSucceeded] = useState(false)
+    const [processing, setProcessing] = useState("")
+    const [error, setError] = useState(null)
+    const [disabled, setDisabled] = useState(true)
+    const [clientSecret, setClientSecret] = useState(true)
+    
+    useEffect(() => {
+        // generate the special stripe secret which allows us to charge a customer
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                // Stripe expects the total in a currencies subunits
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+            });
+            setClientSecret(response.data.clientSecret)
+        }
 
-    const handleSubmit = e=>{
+        getClientSecret()
+    }, [basket])
+
+    console.log("THE SECRET FOR CLIENT IS---------->", clientSecret)
+
+    const handleSubmit = async (event) =>{
         //do all the stripe fuction
+        event.preventDefault()
+        setProcessing(true)
+
+        const payload = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(CardElement)
+            }
+        }).then(({ paymentIntent }) => {
+            // paymentIntent = payment confirmation
+
+            setSucceeded(true)
+            setError(null)
+            setProcessing(false)
+
+            history.replace('/orders')
+        })
+
     }
 
     const handleChange = event =>{

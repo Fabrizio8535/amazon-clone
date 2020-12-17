@@ -127,7 +127,34 @@ b)import { Elements } from '@stripe/react-stripe-js'
 later.
 -Now create a form and have <CardElement/> insisde it under the payment__details section
 -Add the .payment__details on flex-0.8 so the card form appears on screen.
--handleChange and handleSubmit functions
+-Introduce handleChange and handleSubmit functions
 -Adding div inside the form with "payment__priceContainer" and
 CurrencyFormat on it.
 -Setting states for "error, disabled, processing and succeeded
+-Complete the handleChange function
+-Introduce useEffect and initialize "clientSecret" state so we can
+retrieve the latest client secret each time the basket updates.
+- Use "npm i axios" to import the axios dependencies
+-Create a new file called "axios.js" (the base url is "..." at the moment
+which will be changed later)
+-After axios.js, complete the useEffect() and get the clientSecret.
+- then use that clientSecret to complete the handleSubmit
+
+
+------------------------BACKEND-----------------------------------
+---- Type "firebase init" on cmd but this time choose the "Functions"
+and select Javascript, press Yes on both options..
+- Now we should have a different directory called "functions" so
+FROM NOW ON ALWAYS USE NPM INSTALL INSIDE THIS DIRECTORY... very IMPORTANT
+- use command "npm i express" inside the functions directory.
+- use command "npm i cors" inside the functions directory.
+- use command "npm i stripe" inside the functions directory.
+-Add requires for all three and the stripe one will contain the secret key..
+-Finishing setting up the API thingy in index.js on functions directory
+- To run it on localhost, run "firebase emulators:start" on cmd
+- Get that link("http://localhost:5001/challenge-1e59f/us-central1/api")
+and test whether the API call works... should get the response
+-- Now do the POST request for the api after the GET request.
+- Go to axios and paste the base url into it ("http://localhost:5001/challenge-1e59f/us-central1/api")
+
+--------FIX THAT ERROR WITH LOCALHOST://3000 THING ASAP
