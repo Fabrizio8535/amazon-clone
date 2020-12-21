@@ -12,7 +12,7 @@ import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import Orders from './Orders'
 
-/*https://www.youtube.com/watch?v=RDV3Z1KCBvo at 7:12:51 */
+/*https://www.youtube.com/watch?v=RDV3Z1KCBvo at 7:52:25 */
 
 const promise = loadStripe("pk_test_51HykWYJgrIQ5vekhmn4JuFLysw2d6asUArT0RJe8hBj486WioaHAJcGfeynrMWXbDHwCvlkRCpinSdY1rctexgWO00wrC7jvWD")
 

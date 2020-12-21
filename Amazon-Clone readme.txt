@@ -167,3 +167,17 @@ type "EMPTY_BASKET" and also add the case on reducer.
 ----------------Pushing the Orders to the DB--------------------------
 -Go to Firebase -> FireStore -> Create FireStore -> Start in Test mode
 -In Payment.js, imported the {db} and implemented it after payment process..
+- In Orders.js, implemented the db fetch so we can display the orders
+in the Orders page. 
+-------------Displaying the Order in orders page---------------------
+-Pass the 'Order' component in Orders.js
+-Create new file called "Order.js" with its css file and accept the
+props "{order}".
+- Install something called moments using "npm install moment" inside
+the amazon-clone directory and use 'import moment from "moment"'
+in Order.js.
+-Complete Order.js so that it displays the ordered items and total...
+-Styling in the Orders and Order.css
+-To hide the "Remove from basket" button, pass the hideButton prop in
+CheckoutProduct [Line 22 in Order.js]. And In CheckoutProduct.js, use
+ it as conditional rendering to render out that button.
