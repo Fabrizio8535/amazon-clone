@@ -181,3 +181,21 @@ in Order.js.
 -To hide the "Remove from basket" button, pass the hideButton prop in
 CheckoutProduct [Line 22 in Order.js]. And In CheckoutProduct.js, use
  it as conditional rendering to render out that button.
+ --Finished Styling UI - Styling buttons and payment form on Payment.css.
+--------------Deploying the backend online------------------
+-cd into functions directory and use the command 
+"firebase deploy --only functions"
+-After done, go to Firebase -> Functions -> grab the link from the http
+request... "https://us-central1-challenge-1e59f.cloudfunctions.net/api"
+and paste it to baseURL in axios.
+--------------Deploying the entire application online-----------
+-go back to amazon-clone directory by using "cd .."
+-"npm run build"
+-then followed by "firebase deploy --only hosting".....
+
+
+--------Enhancing little details on app-----------------------
+-If user is not logged in when clicking on the "Proceed to Checkout"
+button, the app will redirect them to login page else to payment page.
+- If Basket is empty, disable the "Buy Now" button on Payment.js[line 77-82]
+{NEED TO FIX THE INPUT FOR CARD DETAILS}
